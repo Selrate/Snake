@@ -18,6 +18,11 @@ void Pickup::NewPosition(list<COORD> _blacklist)
 {
 	// Loop until empty position is found
 	bool DoLoop = false;
+
+	// Reseeed randomizer
+	srand(time(NULL));
+
+	// Generate position
 	do
 	{
 		// Generate new pos (don't need to clear since head char overrites)
